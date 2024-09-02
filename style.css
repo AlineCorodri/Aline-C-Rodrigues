@@ -1,0 +1,37 @@
+
+nav {
+    grid-column: 1 / span 12;
+    background-color: #f5e7de;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 95px;
+}
+
+a {
+    text-decoration: none;
+    color: #bc622d;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #bc622d;
+    color: white;
+}
+
+footer {
+    background-color: #d9a47e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

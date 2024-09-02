@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        /* Reseta a margem padrão e define a fonte global */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Estilo para o container principal usando grid layout */
+        .container {
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 12; /* Define 12 colunas iguais */
+            gap: 10px;
+        }
+        /* Estilo para o cabeçalho */
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #d9a47e;
+            padding: 20px 0;
+        }
+        /* Estilo para o título principal */
+        h1 {
+            font-family: Georgia, serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: georgia;
+            color:#bc622d;
+            margin: 0;
+            margin-top: 20px;
+        }
+        /* Estilo para a navegação */
+        nav {
+            grid-column: 1 / span 12;
+            background-color: #f5e7de;
+        }
+
+        ul {
+            list-style-type: none; /* Remove marcadores da lista */
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 95px; /* Ajuste a margem conforme necessário */
+        }
+    
+        a {
+            text-decoration: none;
+            color: #bc622d;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+          /* Estilo para o estado de hover dos links */
+        a:hover {
+            background-color: #bc622d;
+            color: white;
+        }
+
+        .imagem_eu {
+            grid-column-start: 1; /* Ocupação das colunas no grid */
+            grid-column-end: 3;
+            padding: 10px;
+        }
+
+        .imagem_eu img {
+    width: 325px;  /* Define a largura da imagem */
+    height: auto;  /* Ajusta a altura automaticamente para manter a proporção */
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 20px;
+        }
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #d9a47e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navegação do site -->
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação acadêmica</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1> Bem-vindo ao meu portfólio </h1>
+    </header>
+       <!-- Container para a imagem e conteúdo principal -->
+    <div class="container">
+        <aside class="imagem_eu">
+            <img src="aline corodri.jpg" alt="Imagem de Aline Corodri">
+        </aside>
+        <section class="principal">
+            <h2> Aline Rodriguês </h2>
+        <p> 
+            Olá, meu nome é Aline, tenho 24 anos e nasci em Curitiba/PR. Sou a filha mais velha de quatro meninas e um menino e atualmente moro com meu irmão.
+            Desde cedo, sempre fui apaixonada por aprender e explorar novos conhecimentos. Sou uma cinéfila dedicada, fascinada pela profundidade e
+            mensagem dos filmes, e amo me perder na beleza e complexidade da música.
+         
+            Como uma canceriana sonhadora e determinada, busco constantemente o equilíbrio entre minha vida pessoal e profissional. Gosto de correr
+            e frequentar a academia, mantendo-me ativa e saudável. Meus objetivos incluem alcançar uma realização profissional significativa e continuar
+            crescendo em minha carreira.
+        </p>
+        <br>
+        <p>
+            Minha abordagem analítica e meticulosa me permite enfrentar desafios de forma lógica e estruturada. Embora possa ser vista como reticente e,
+            às vezes, distante, essa característica é resultado da minha necessidade de manter controle e privacidade. Eu valorizo a precisão e a clareza
+            em tudo que faço, e minha forma estruturada de pensar me ajuda a resolver problemas complexos com eficácia.
+            
+            Prefiro trabalhar em ambientes que respeitem minha liberdade e privacidade, e costumo me sentir mais confortável em grupos pequenos. Acredito
+            que a competência e o sucesso no trabalho falam por si mesmos, e embora não busque constantemente reconhecimento, valorizo a sensação de dever
+            cumprido.
+        
+            Estou sempre aberta a novas oportunidades e desafios, e ansiosa para colaborar em projetos que desafiem minhas habilidades e ampliem meus
+            horizontes. Se você está interessado em saber mais sobre meu trabalho ou explorar possíveis colaborações, fique à vontade para entrar em
+            contato.
+        </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Meu Portfólio Pessoal </p>
+    </footer>
+</body>
+</html>
+

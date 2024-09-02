@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+    <style>
+        /* Reseta a margem padrão e define a fonte global */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Estilo para o container principal usando grid layout */
+        .container {
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 12; /* Define 12 colunas iguais */
+            gap: 10px;
+        }
+        /* Estilo para o cabeçalho */
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #d9a47e;
+            padding: 20px 0;
+        }
+        /* Estilo para o título principal */
+        h1 {
+            font-family: Georgia, serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            color: #bc622d;
+            margin: 0;
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Estilo para a navegação */
+        nav {
+            grid-column: 1 / span 12;
+            background-color: #f5e7de;
+        }
+
+        ul {
+            list-style-type: none; /* Remove marcadores da lista */
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 95px; /* Ajuste a margem conforme necessário */
+        }
+
+        a {
+            text-decoration: none;
+            color: #bc622d;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+          /* Estilo para o estado de hover dos links */
+        a:hover {
+            background-color: #bc622d;
+            color: white;
+        }
+        /* Estilo para o carrossel de imagens */
+        .carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Define a largura máxima do carrossel */
+            margin: 0 auto; /* Centraliza o carrossel na página */
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease; /* Transição suave para a mudança de imagens */
+        }
+
+        .carousel-images img {
+            width: 325px;
+            height: auto;
+            flex-shrink: 0; /* Impede que as imagens encolham */
+            margin-right: 10px; /* Espaçamento entre as imagens */
+        }
+        /* Botões de navegação do carrossel */
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: #bc622d;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #d9a47e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Navegação do site -->
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação acadêmica</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+     <!-- Cabeçalho da página -->
+    <header>
+        <h1> Meu Portfólio </h1>
+    </header>
+
+    <h2> Aqui estão alguns dos meus trabalhos em web designer e Designer Gráfico: </h2>
+     <!-- Carrossel de imagens -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="PROPAGANDA ONLINE DEPILAÇÃO (1).png" alt="Depilacao1">
+            <img src="PROPAGANDA ONLINE DEPILAÇÃO (2).png" alt="Depilacao2">
+            <img src="mulher.png" alt="Depilacao3">
+            <img src="CARTAO DE VISITA - ELETRICA.png" alt="Cartão de Visita Eletrica">
+            <img src="FORMULARIO DE ORCAMENTO.jpg" alt="Formulario de orcamento">
+            <img src="CARTAO DE VISITA - RESTAURANTE.png" alt="Cartão de Visita Restaurante">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev">‹</button>
+            <button id="next">›</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Meu Portfólio Pessoal</p>
+    </footer>
+
+    <script>
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        let currentIndex = 0;
+        // Função para atualizar o carrossel de imagens
+        function updateCarousel() {
+            const imageWidth = images[0].clientWidth;
+            carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+        // Evento para o botão de voltar no carrossel
+        prevButton.addEventListener('click', () => {
+            const totalImages = images.length;
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+            updateCarousel();
+        });
+        // Evento para o botão de avançar no carrossel
+        nextButton.addEventListener('click', () => {
+            const totalImages = images.length;
+            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        // Inicializa o carrossel na posição correta
+        updateCarousel();
+    </script>
+</body>
+</html>

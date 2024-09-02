@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formacao Academica</title>
+    <link rel="stylesheet" href="style.css"> <!-- Se você tiver um CSS separado -->
+</head>
+<style>
+    /* Reseta a margem padrão e define a fonte global */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    /* Estilo para o container principal usando grid layout */
+    .container {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 12; /* Define 12 colunas iguais */
+        gap: 10px;
+    }
+    /* Estilo para o cabeçalho */
+    header {
+        grid-column-start: 1;
+        grid-column-end: 12;
+        background-color: #d9a47e;
+        padding: 20px 0;
+    }
+    /* Estilo para o título principal */
+    h1 {
+        font-family: Georgia, serif;
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+
+    h2 {
+        font-family: georgia;
+        color:#bc622d;
+        margin: 0;
+        margin-top: 20px;
+    }
+    /* Estilo para a navegação */
+    nav {
+        grid-column: 1 / span 12;
+        background-color: #f5e7de;
+    }
+
+    ul {
+        list-style-type: none; /* Remove marcadores da lista */
+        margin: 20px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 95px; /* Ajuste a margem conforme necessário */
+    }
+
+    a {
+        text-decoration: none;
+        color: #bc622d;
+        padding: 15px 20px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+      /* Estilo para o estado de hover dos links */
+    a:hover {
+        background-color: #bc622d;
+        color: white;
+    }
+
+    .principal {
+        grid-column-start: 4;
+        grid-column-end: 12;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: justify;
+        font-size: 17px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 20px;
+    }
+
+    .lista {
+            list-style-type: circle; /* Define o estilo da lista como bolinhas */
+            padding-left: 20px; 
+            flex-direction: column;
+        }
+        /* Estilo para o rodapé */
+    footer {
+        background-color: #d9a47e;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+</style>
+<body>
+    <!-- Navegação do site -->
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação acadêmica</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Formação Acadêmica</h1>
+    </header>
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <section class="principal">
+            <h2> Minha Formação </h2>
+            <p>
+Sou formada em Relações Públicas desde julho de 2023 e possuo uma formação adicional em Design Gráfico e Adobe pela CD6
+Desenvolvimento de Pessoas e Negócios. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, além de Inglês pela
+Uninter, e finalizando um curso de Gestão Contábil e Financeira. 
+            </p>
+            <h2> Habilidades e Competências: </h2>
+            <p>
+Sou uma pessoa estruturada e analítica, o que me capacita a lidar com detalhes precisos e sistemas sofisticados. Minha capacidade
+de observação, organização e atitude pró-ativa são fundamentais para enfrentar desafios e entregar resultados consistentes. 
+            </p>
+            <h2> Experiência Profissional: </h2>
+            <p>
+Desde 2018, atuo no setor de fotografia, onde adquiri experiência sólida em Photoshop, Illustrator, fotografia e gestão de equipe.
+            <ul class="lista">
+                <li> Criação de artes para books fotograficos e molduras de fotos; </li>
+                <li> Viagens para produção de materiais e divulgação em stands; </li>
+                <li> Fotógrafa; </li>
+                <li> Montagemde albúns fotograficos; </li>
+                <li> Organização de estoque; </li>
+                <li> Cumprimento de rotinas admistrativas referente à informações de clientes; </li>
+                <li> Elaboração e acompanhamento de compra de materiais; </li>
+                <li> Elaboração de materiais gráficos impressos e digitais; </li>
+                <li> Tratamento de imagens com photoshop; </li>
+                <li> Produção de álbuns do zero; </li>
+                <li> Organização e gerenciamento de equipe.</li>
+            </ul>
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Meu Portfólio Pessoal</p>
+    </footer>
+</body>
+</html>
