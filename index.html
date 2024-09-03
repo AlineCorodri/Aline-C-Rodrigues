@@ -97,6 +97,32 @@
             padding: 10px 0;
         }
 
+        /* Media query para dispositivos móveis */
+@media only screen and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr; /* Define uma coluna */
+    }
+
+    .imagem_eu, .principal {
+        grid-column: 1 / span 1; /* Ocupa toda a largura da coluna */
+    }
+
+    ul {
+        flex-direction: column; /* Organiza os itens da navegação em coluna */
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
+    }
+
+    .principal {
+        font-size: 16px; /* Ajusta o tamanho da fonte se necessário */
+        padding: 10px; /* Ajuste o padding para dispositivos móveis */
+    }
+}
+
+
     </style>
 </head>
 <body>
